@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82F473D1-7A95-4F75-8849-EF4C55735E4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssetDLL</RootNamespace>
+    <AssemblyName>AssetDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingAssetDepreciationHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountingAssetDepreciationHistoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingAssetsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountingAssetsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssetAssignmentHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetAssignmentHistoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssetClass.cs" />
+    <Compile Include="AssetMainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetMainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AssetTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAccountingAssetbyAssetIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAccountingAssetbyAssetIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAccountingAssetDepreciationHistoryByAssetIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveAccountingAssetsByAccountNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveAccountingAssetsByAccountNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveAccountingAssetsByValueDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveAccountingAssetsByValueDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveAssetMainByEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveAssetMainByEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveAssetMainByLocationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveAssetMainByLocationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveAssetMainDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveAssetMainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssetAssignHistoryByAssetIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssetAssignHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssetAssignmentHistoryByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssetAssignmentHistoryByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAssetTypeByAssetTypeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssetTypeByAssetTypeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedAssetTypesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedAssetTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAccountingAssetDepreciationHistoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAccountingAssetDepreciationHistoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAccountingAssetEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAccountingAssetEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssetAssignmentHistoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssetAssignmentHistoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssetMainEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssetMainEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertAssetTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertAssetTypeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RetireAssetMainEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetireAssetMainEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAccountingAssetCurrentValueEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAccountingAssetCurrentValueEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAssetMainEmployeeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAssetMainEmployeeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAssetMainWarehouseEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateAssetMainWarehouseEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccountingAssetDepreciationHistoryDataSet.xsc">
+      <DependentUpon>AccountingAssetDepreciationHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountingAssetDepreciationHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountingAssetDepreciationHistoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccountingAssetDepreciationHistoryDataSet.xss">
+      <DependentUpon>AccountingAssetDepreciationHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountingAssetsDataSet.xsc">
+      <DependentUpon>AccountingAssetsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountingAssetsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountingAssetsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccountingAssetsDataSet.xss">
+      <DependentUpon>AccountingAssetsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="AssetAssignmentHistoryDataSet.xsc">
+      <DependentUpon>AssetAssignmentHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssetAssignmentHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssetAssignmentHistoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssetAssignmentHistoryDataSet.xss">
+      <DependentUpon>AssetAssignmentHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssetMainDataSet.xsc">
+      <DependentUpon>AssetMainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssetMainDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssetMainDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssetMainDataSet.xss">
+      <DependentUpon>AssetMainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssetTypeDataSet.xsc">
+      <DependentUpon>AssetTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AssetTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AssetTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AssetTypeDataSet.xss">
+      <DependentUpon>AssetTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAccountingAssetbyAssetIDDataSet.xsc">
+      <DependentUpon>FindAccountingAssetbyAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAccountingAssetbyAssetIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAccountingAssetbyAssetIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAccountingAssetbyAssetIDDataSet.xss">
+      <DependentUpon>FindAccountingAssetbyAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xsc">
+      <DependentUpon>FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAccountingAssetDepreciationHistoryByAssetIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xss">
+      <DependentUpon>FindAccountingAssetDepreciationHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAccountingAssetsByAccountNumberDataSet.xsc">
+      <DependentUpon>FindActiveAccountingAssetsByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAccountingAssetsByAccountNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveAccountingAssetsByAccountNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveAccountingAssetsByAccountNumberDataSet.xss">
+      <DependentUpon>FindActiveAccountingAssetsByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAccountingAssetsByValueDataSet.xsc">
+      <DependentUpon>FindActiveAccountingAssetsByValueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAccountingAssetsByValueDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveAccountingAssetsByValueDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveAccountingAssetsByValueDataSet.xss">
+      <DependentUpon>FindActiveAccountingAssetsByValueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainByEmployeeDataSet.xsc">
+      <DependentUpon>FindActiveAssetMainByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainByEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveAssetMainByEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveAssetMainByEmployeeDataSet.xss">
+      <DependentUpon>FindActiveAssetMainByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainByLocationDataSet.xsc">
+      <DependentUpon>FindActiveAssetMainByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainByLocationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveAssetMainByLocationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveAssetMainByLocationDataSet.xss">
+      <DependentUpon>FindActiveAssetMainByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainDataSet.xsc">
+      <DependentUpon>FindActiveAssetMainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveAssetMainDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveAssetMainDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveAssetMainDataSet.xss">
+      <DependentUpon>FindActiveAssetMainDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetAssignHistoryByAssetIDDataSet.xsc">
+      <DependentUpon>FindAssetAssignHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetAssignHistoryByAssetIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssetAssignHistoryByAssetIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssetAssignHistoryByAssetIDDataSet.xss">
+      <DependentUpon>FindAssetAssignHistoryByAssetIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetAssignmentHistoryByDateRangeDataSet.xsc">
+      <DependentUpon>FindAssetAssignmentHistoryByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetAssignmentHistoryByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssetAssignmentHistoryByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssetAssignmentHistoryByDateRangeDataSet.xss">
+      <DependentUpon>FindAssetAssignmentHistoryByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetTypeByAssetTypeIDDataSet.xsc">
+      <DependentUpon>FindAssetTypeByAssetTypeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetTypeByAssetTypeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssetTypeByAssetTypeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssetTypeByAssetTypeIDDataSet.xss">
+      <DependentUpon>FindAssetTypeByAssetTypeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedAssetTypesDataSet.xsc">
+      <DependentUpon>FindSortedAssetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedAssetTypesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedAssetTypesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedAssetTypesDataSet.xss">
+      <DependentUpon>FindSortedAssetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAccountingAssetDepreciationHistoryEntry.xsc">
+      <DependentUpon>InsertAccountingAssetDepreciationHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAccountingAssetDepreciationHistoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAccountingAssetDepreciationHistoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAccountingAssetDepreciationHistoryEntry.xss">
+      <DependentUpon>InsertAccountingAssetDepreciationHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAccountingAssetEntry.xsc">
+      <DependentUpon>InsertAccountingAssetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAccountingAssetEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAccountingAssetEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAccountingAssetEntry.xss">
+      <DependentUpon>InsertAccountingAssetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetAssignmentHistoryEntry.xsc">
+      <DependentUpon>InsertAssetAssignmentHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetAssignmentHistoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssetAssignmentHistoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssetAssignmentHistoryEntry.xss">
+      <DependentUpon>InsertAssetAssignmentHistoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetMainEntry.xsc">
+      <DependentUpon>InsertAssetMainEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetMainEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssetMainEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssetMainEntry.xss">
+      <DependentUpon>InsertAssetMainEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetTypeEntry.xsc">
+      <DependentUpon>InsertAssetTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertAssetTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertAssetTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertAssetTypeEntry.xss">
+      <DependentUpon>InsertAssetTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RetireAssetMainEntry.xsc">
+      <DependentUpon>RetireAssetMainEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RetireAssetMainEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RetireAssetMainEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RetireAssetMainEntry.xss">
+      <DependentUpon>RetireAssetMainEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAccountingAssetCurrentValueEntry.xsc">
+      <DependentUpon>UpdateAccountingAssetCurrentValueEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAccountingAssetCurrentValueEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAccountingAssetCurrentValueEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAccountingAssetCurrentValueEntry.xss">
+      <DependentUpon>UpdateAccountingAssetCurrentValueEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssetMainEmployeeEntry.xsc">
+      <DependentUpon>UpdateAssetMainEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssetMainEmployeeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAssetMainEmployeeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAssetMainEmployeeEntry.xss">
+      <DependentUpon>UpdateAssetMainEmployeeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssetMainWarehouseEntry.xsc">
+      <DependentUpon>UpdateAssetMainWarehouseEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateAssetMainWarehouseEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateAssetMainWarehouseEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateAssetMainWarehouseEntry.xss">
+      <DependentUpon>UpdateAssetMainWarehouseEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
