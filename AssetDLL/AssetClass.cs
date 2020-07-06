@@ -9,6 +9,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Management.Instrumentation;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,24 @@ namespace AssetDLL
         FindAssetTypeByAssetTypeIDDataSet aFindAssetTypeByAssetTypeIDDataSet;
         FindAssetTypeByAssetTypeIDDataSetTableAdapters.FindAssetTypeByAssetTypeIDTableAdapter aFindAssetTypeByAssetTypeIDTableAdapter;
 
+        FindAssetTypeByAssetTypeDataSet aFindAssetTypeByAssetTypeDataSet;
+        FindAssetTypeByAssetTypeDataSetTableAdapters.FindAssetTypeByAssetTypeTableAdapter aFindAssetTypeByAssetTypeTableAdapter;
+
+        public FindAssetTypeByAssetTypeDataSet FindAssetTypeByAssetType(string strAssetType)
+        {
+            try
+            {
+                aFindAssetTypeByAssetTypeDataSet = new FindAssetTypeByAssetTypeDataSet();
+                aFindAssetTypeByAssetTypeTableAdapter = new FindAssetTypeByAssetTypeDataSetTableAdapters.FindAssetTypeByAssetTypeTableAdapter();
+                aFindAssetTypeByAssetTypeTableAdapter.Fill(aFindAssetTypeByAssetTypeDataSet.FindAssetTypeByAssetType, strAssetType);
+            }
+            catch (Exception eX)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Asset Class // Find Asset Type By Asset Type " + eX.Message);
+            }
+
+            return aFindAssetTypeByAssetTypeDataSet;
+        }
         public FindAssetTypeByAssetTypeIDDataSet FindAssetTypeByAssetTypeID(int intAssetTypeID)
         {
             try
