@@ -91,6 +91,24 @@ namespace AssetDLL
         FindAssetTypeByAssetTypeDataSet aFindAssetTypeByAssetTypeDataSet;
         FindAssetTypeByAssetTypeDataSetTableAdapters.FindAssetTypeByAssetTypeTableAdapter aFindAssetTypeByAssetTypeTableAdapter;
 
+        FindAssetMainBySerialNumberDataSet aFindAssetMainBySerialNumberDataSet;
+        FindAssetMainBySerialNumberDataSetTableAdapters.FindAssetMainBySerialNumberTableAdapter aFindAssetMainBySerialNumberTableAdapter;
+
+        public FindAssetMainBySerialNumberDataSet FindAssetMainBySerialNumber(string strSerialNumber)
+        {
+            try
+            {
+                aFindAssetMainBySerialNumberDataSet = new FindAssetMainBySerialNumberDataSet();
+                aFindAssetMainBySerialNumberTableAdapter = new FindAssetMainBySerialNumberDataSetTableAdapters.FindAssetMainBySerialNumberTableAdapter();
+                aFindAssetMainBySerialNumberTableAdapter.Fill(aFindAssetMainBySerialNumberDataSet.FindAssetMainBySerialNumber, strSerialNumber);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Asset Class // Find Asset Main By Serial Number " + Ex.Message);
+            }
+
+            return aFindAssetMainBySerialNumberDataSet;
+        }
         public FindAssetTypeByAssetTypeDataSet FindAssetTypeByAssetType(string strAssetType)
         {
             try
@@ -278,14 +296,14 @@ namespace AssetDLL
 
             return blnFatalError;
         }
-        public bool InsertAssetMain(string strAssetPartNumber, int intAssetTypeID, string strAssetDescription, decimal decAssetCost, int intWarehouseID, int intEmployeeID, string strAssetNotes, DateTime datDataEntryDate)
+        public bool InsertAssetMain(string strAssetPartNumber, int intAssetTypeID, string strAssetDescription, decimal decAssetCost, int intWarehouseID, int intEmployeeID, string strAssetNotes, DateTime datDataEntryDate, string strSerialNumber)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertAssetMainTableAdapter = new InsertAssetMainEntryTableAdapters.QueriesTableAdapter();
-                aInsertAssetMainTableAdapter.InsertAssetMain(strAssetPartNumber, intAssetTypeID, strAssetDescription, decAssetCost, intWarehouseID, intEmployeeID, DateTime.Now, strAssetNotes, datDataEntryDate);
+                aInsertAssetMainTableAdapter.InsertAssetMain(strAssetPartNumber, intAssetTypeID, strAssetDescription, decAssetCost, intWarehouseID, intEmployeeID, DateTime.Now, strAssetNotes, datDataEntryDate, strSerialNumber);
             }
             catch (Exception Ex)
             {

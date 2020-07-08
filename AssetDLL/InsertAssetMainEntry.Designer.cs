@@ -283,12 +283,13 @@ namespace AssetDLL.InsertAssetMainEntryTableAdapters {
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActiveDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetNotes", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataEntryDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SerialNumber", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int InsertAssetMain(string AssetPartNumber, global::System.Nullable<int> AssetTypeID, string AssetDescription, global::System.Nullable<decimal> AssetCost, global::System.Nullable<int> WarehouseID, global::System.Nullable<int> EmployeeID, global::System.Nullable<global::System.DateTime> ActiveDate, string AssetNotes, global::System.Nullable<global::System.DateTime> DataEntryDate) {
+        public virtual int InsertAssetMain(string AssetPartNumber, global::System.Nullable<int> AssetTypeID, string AssetDescription, global::System.Nullable<decimal> AssetCost, global::System.Nullable<int> WarehouseID, global::System.Nullable<int> EmployeeID, global::System.Nullable<global::System.DateTime> ActiveDate, string AssetNotes, global::System.Nullable<global::System.DateTime> DataEntryDate, string SerialNumber) {
             global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
             if ((AssetPartNumber == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -343,6 +344,12 @@ namespace AssetDLL.InsertAssetMainEntryTableAdapters {
             }
             else {
                 command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((SerialNumber == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(SerialNumber));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

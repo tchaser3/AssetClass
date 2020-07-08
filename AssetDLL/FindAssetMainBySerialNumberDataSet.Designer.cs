@@ -20,17 +20,17 @@ namespace AssetDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AssetMainDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindAssetMainBySerialNumberDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AssetMainDataSet : global::System.Data.DataSet {
+    public partial class FindAssetMainBySerialNumberDataSet : global::System.Data.DataSet {
         
-        private assetmainDataTable tableassetmain;
+        private FindAssetMainBySerialNumberDataTable tableFindAssetMainBySerialNumber;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public AssetMainDataSet() {
+        public FindAssetMainBySerialNumberDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace AssetDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected AssetMainDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindAssetMainBySerialNumberDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace AssetDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["assetmain"] != null)) {
-                    base.Tables.Add(new assetmainDataTable(ds.Tables["assetmain"]));
+                if ((ds.Tables["FindAssetMainBySerialNumber"] != null)) {
+                    base.Tables.Add(new FindAssetMainBySerialNumberDataTable(ds.Tables["FindAssetMainBySerialNumber"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace AssetDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public assetmainDataTable assetmain {
+        public FindAssetMainBySerialNumberDataTable FindAssetMainBySerialNumber {
             get {
-                return this.tableassetmain;
+                return this.tableFindAssetMainBySerialNumber;
             }
         }
         
@@ -127,7 +127,7 @@ namespace AssetDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AssetMainDataSet cln = ((AssetMainDataSet)(base.Clone()));
+            FindAssetMainBySerialNumberDataSet cln = ((FindAssetMainBySerialNumberDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace AssetDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["assetmain"] != null)) {
-                    base.Tables.Add(new assetmainDataTable(ds.Tables["assetmain"]));
+                if ((ds.Tables["FindAssetMainBySerialNumber"] != null)) {
+                    base.Tables.Add(new FindAssetMainBySerialNumberDataTable(ds.Tables["FindAssetMainBySerialNumber"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace AssetDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableassetmain = ((assetmainDataTable)(base.Tables["assetmain"]));
+            this.tableFindAssetMainBySerialNumber = ((FindAssetMainBySerialNumberDataTable)(base.Tables["FindAssetMainBySerialNumber"]));
             if ((initTable == true)) {
-                if ((this.tableassetmain != null)) {
-                    this.tableassetmain.InitVars();
+                if ((this.tableFindAssetMainBySerialNumber != null)) {
+                    this.tableFindAssetMainBySerialNumber.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace AssetDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AssetMainDataSet";
+            this.DataSetName = "FindAssetMainBySerialNumberDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AssetMainDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindAssetMainBySerialNumberDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableassetmain = new assetmainDataTable();
-            base.Tables.Add(this.tableassetmain);
+            this.tableFindAssetMainBySerialNumber = new FindAssetMainBySerialNumberDataTable();
+            base.Tables.Add(this.tableFindAssetMainBySerialNumber);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeassetmain() {
+        private bool ShouldSerializeFindAssetMainBySerialNumber() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace AssetDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AssetMainDataSet ds = new AssetMainDataSet();
+            FindAssetMainBySerialNumberDataSet ds = new FindAssetMainBySerialNumberDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,47 +270,43 @@ namespace AssetDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void assetmainRowChangeEventHandler(object sender, assetmainRowChangeEvent e);
+        public delegate void FindAssetMainBySerialNumberRowChangeEventHandler(object sender, FindAssetMainBySerialNumberRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class assetmainDataTable : global::System.Data.TypedTableBase<assetmainRow> {
+        public partial class FindAssetMainBySerialNumberDataTable : global::System.Data.TypedTableBase<FindAssetMainBySerialNumberRow> {
             
             private global::System.Data.DataColumn columnAssetID;
             
             private global::System.Data.DataColumn columnAssetPartNumber;
             
-            private global::System.Data.DataColumn columnAssetTypeID;
-            
             private global::System.Data.DataColumn columnAssetDescription;
             
-            private global::System.Data.DataColumn columnAssetCost;
+            private global::System.Data.DataColumn columnAssetActive;
             
             private global::System.Data.DataColumn columnWarehouseID;
             
             private global::System.Data.DataColumn columnEmployeeID;
             
-            private global::System.Data.DataColumn columnAssetActive;
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnAssetActive1;
             
             private global::System.Data.DataColumn columnActiveDate;
-            
-            private global::System.Data.DataColumn columnAssetNotes;
             
             private global::System.Data.DataColumn columnRetirementDate;
             
             private global::System.Data.DataColumn columnRetirementNotes;
             
-            private global::System.Data.DataColumn columnDataEntryDate;
-            
-            private global::System.Data.DataColumn columnSerialNumber;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainDataTable() {
-                this.TableName = "assetmain";
+            public FindAssetMainBySerialNumberDataTable() {
+                this.TableName = "FindAssetMainBySerialNumber";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -318,7 +314,7 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal assetmainDataTable(global::System.Data.DataTable table) {
+            internal FindAssetMainBySerialNumberDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -335,7 +331,7 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected assetmainDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindAssetMainBySerialNumberDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -358,14 +354,6 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AssetTypeIDColumn {
-                get {
-                    return this.columnAssetTypeID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn AssetDescriptionColumn {
                 get {
                     return this.columnAssetDescription;
@@ -374,9 +362,9 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AssetCostColumn {
+            public global::System.Data.DataColumn AssetActiveColumn {
                 get {
-                    return this.columnAssetCost;
+                    return this.columnAssetActive;
                 }
             }
             
@@ -398,9 +386,25 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AssetActiveColumn {
+            public global::System.Data.DataColumn FirstNameColumn {
                 get {
-                    return this.columnAssetActive;
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AssetActive1Column {
+                get {
+                    return this.columnAssetActive1;
                 }
             }
             
@@ -409,14 +413,6 @@ namespace AssetDLL {
             public global::System.Data.DataColumn ActiveDateColumn {
                 get {
                     return this.columnActiveDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AssetNotesColumn {
-                get {
-                    return this.columnAssetNotes;
                 }
             }
             
@@ -438,22 +434,6 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DataEntryDateColumn {
-                get {
-                    return this.columnDataEntryDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SerialNumberColumn {
-                get {
-                    return this.columnSerialNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -463,65 +443,63 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRow this[int index] {
+            public FindAssetMainBySerialNumberRow this[int index] {
                 get {
-                    return ((assetmainRow)(this.Rows[index]));
+                    return ((FindAssetMainBySerialNumberRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event assetmainRowChangeEventHandler assetmainRowChanging;
+            public event FindAssetMainBySerialNumberRowChangeEventHandler FindAssetMainBySerialNumberRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event assetmainRowChangeEventHandler assetmainRowChanged;
+            public event FindAssetMainBySerialNumberRowChangeEventHandler FindAssetMainBySerialNumberRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event assetmainRowChangeEventHandler assetmainRowDeleting;
+            public event FindAssetMainBySerialNumberRowChangeEventHandler FindAssetMainBySerialNumberRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event assetmainRowChangeEventHandler assetmainRowDeleted;
+            public event FindAssetMainBySerialNumberRowChangeEventHandler FindAssetMainBySerialNumberRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddassetmainRow(assetmainRow row) {
+            public void AddFindAssetMainBySerialNumberRow(FindAssetMainBySerialNumberRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRow AddassetmainRow(string AssetPartNumber, int AssetTypeID, string AssetDescription, decimal AssetCost, int WarehouseID, int EmployeeID, bool AssetActive, System.DateTime ActiveDate, string AssetNotes, System.DateTime RetirementDate, string RetirementNotes, System.DateTime DataEntryDate, string SerialNumber) {
-                assetmainRow rowassetmainRow = ((assetmainRow)(this.NewRow()));
+            public FindAssetMainBySerialNumberRow AddFindAssetMainBySerialNumberRow(string AssetPartNumber, string AssetDescription, bool AssetActive, int WarehouseID, int EmployeeID, string FirstName, string LastName, bool AssetActive1, System.DateTime ActiveDate, System.DateTime RetirementDate, string RetirementNotes) {
+                FindAssetMainBySerialNumberRow rowFindAssetMainBySerialNumberRow = ((FindAssetMainBySerialNumberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         AssetPartNumber,
-                        AssetTypeID,
                         AssetDescription,
-                        AssetCost,
+                        AssetActive,
                         WarehouseID,
                         EmployeeID,
-                        AssetActive,
+                        FirstName,
+                        LastName,
+                        AssetActive1,
                         ActiveDate,
-                        AssetNotes,
                         RetirementDate,
-                        RetirementNotes,
-                        DataEntryDate,
-                        SerialNumber};
-                rowassetmainRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowassetmainRow);
-                return rowassetmainRow;
+                        RetirementNotes};
+                rowFindAssetMainBySerialNumberRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindAssetMainBySerialNumberRow);
+                return rowFindAssetMainBySerialNumberRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRow FindByAssetID(int AssetID) {
-                return ((assetmainRow)(this.Rows.Find(new object[] {
+            public FindAssetMainBySerialNumberRow FindByAssetID(int AssetID) {
+                return ((FindAssetMainBySerialNumberRow)(this.Rows.Find(new object[] {
                             AssetID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                assetmainDataTable cln = ((assetmainDataTable)(base.Clone()));
+                FindAssetMainBySerialNumberDataTable cln = ((FindAssetMainBySerialNumberDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -529,7 +507,7 @@ namespace AssetDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new assetmainDataTable();
+                return new FindAssetMainBySerialNumberDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -537,18 +515,16 @@ namespace AssetDLL {
             internal void InitVars() {
                 this.columnAssetID = base.Columns["AssetID"];
                 this.columnAssetPartNumber = base.Columns["AssetPartNumber"];
-                this.columnAssetTypeID = base.Columns["AssetTypeID"];
                 this.columnAssetDescription = base.Columns["AssetDescription"];
-                this.columnAssetCost = base.Columns["AssetCost"];
+                this.columnAssetActive = base.Columns["AssetActive"];
                 this.columnWarehouseID = base.Columns["WarehouseID"];
                 this.columnEmployeeID = base.Columns["EmployeeID"];
-                this.columnAssetActive = base.Columns["AssetActive"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnAssetActive1 = base.Columns["AssetActive1"];
                 this.columnActiveDate = base.Columns["ActiveDate"];
-                this.columnAssetNotes = base.Columns["AssetNotes"];
                 this.columnRetirementDate = base.Columns["RetirementDate"];
                 this.columnRetirementNotes = base.Columns["RetirementNotes"];
-                this.columnDataEntryDate = base.Columns["DataEntryDate"];
-                this.columnSerialNumber = base.Columns["SerialNumber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -558,80 +534,72 @@ namespace AssetDLL {
                 base.Columns.Add(this.columnAssetID);
                 this.columnAssetPartNumber = new global::System.Data.DataColumn("AssetPartNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssetPartNumber);
-                this.columnAssetTypeID = new global::System.Data.DataColumn("AssetTypeID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAssetTypeID);
                 this.columnAssetDescription = new global::System.Data.DataColumn("AssetDescription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssetDescription);
-                this.columnAssetCost = new global::System.Data.DataColumn("AssetCost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAssetCost);
+                this.columnAssetActive = new global::System.Data.DataColumn("AssetActive", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssetActive);
                 this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarehouseID);
                 this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployeeID);
-                this.columnAssetActive = new global::System.Data.DataColumn("AssetActive", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAssetActive);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnAssetActive1 = new global::System.Data.DataColumn("AssetActive1", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssetActive1);
                 this.columnActiveDate = new global::System.Data.DataColumn("ActiveDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActiveDate);
-                this.columnAssetNotes = new global::System.Data.DataColumn("AssetNotes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAssetNotes);
                 this.columnRetirementDate = new global::System.Data.DataColumn("RetirementDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRetirementDate);
                 this.columnRetirementNotes = new global::System.Data.DataColumn("RetirementNotes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRetirementNotes);
-                this.columnDataEntryDate = new global::System.Data.DataColumn("DataEntryDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataEntryDate);
-                this.columnSerialNumber = new global::System.Data.DataColumn("SerialNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSerialNumber);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAssetID}, true));
                 this.columnAssetID.AutoIncrement = true;
-                this.columnAssetID.AutoIncrementSeed = -1;
-                this.columnAssetID.AutoIncrementStep = -1;
                 this.columnAssetID.AllowDBNull = false;
                 this.columnAssetID.ReadOnly = true;
                 this.columnAssetID.Unique = true;
                 this.columnAssetPartNumber.AllowDBNull = false;
                 this.columnAssetPartNumber.MaxLength = 2147483647;
-                this.columnAssetTypeID.AllowDBNull = false;
                 this.columnAssetDescription.AllowDBNull = false;
                 this.columnAssetDescription.MaxLength = 2147483647;
-                this.columnAssetCost.AllowDBNull = false;
+                this.columnAssetActive.AllowDBNull = false;
                 this.columnWarehouseID.AllowDBNull = false;
                 this.columnEmployeeID.AllowDBNull = false;
-                this.columnAssetActive.AllowDBNull = false;
+                this.columnFirstName.AllowDBNull = false;
+                this.columnFirstName.MaxLength = 2147483647;
+                this.columnLastName.AllowDBNull = false;
+                this.columnLastName.MaxLength = 2147483647;
+                this.columnAssetActive1.AllowDBNull = false;
                 this.columnActiveDate.AllowDBNull = false;
-                this.columnAssetNotes.AllowDBNull = false;
-                this.columnAssetNotes.MaxLength = 2147483647;
                 this.columnRetirementNotes.MaxLength = 2147483647;
-                this.columnDataEntryDate.AllowDBNull = false;
-                this.columnSerialNumber.AllowDBNull = false;
-                this.columnSerialNumber.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRow NewassetmainRow() {
-                return ((assetmainRow)(this.NewRow()));
+            public FindAssetMainBySerialNumberRow NewFindAssetMainBySerialNumberRow() {
+                return ((FindAssetMainBySerialNumberRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new assetmainRow(builder);
+                return new FindAssetMainBySerialNumberRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(assetmainRow);
+                return typeof(FindAssetMainBySerialNumberRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.assetmainRowChanged != null)) {
-                    this.assetmainRowChanged(this, new assetmainRowChangeEvent(((assetmainRow)(e.Row)), e.Action));
+                if ((this.FindAssetMainBySerialNumberRowChanged != null)) {
+                    this.FindAssetMainBySerialNumberRowChanged(this, new FindAssetMainBySerialNumberRowChangeEvent(((FindAssetMainBySerialNumberRow)(e.Row)), e.Action));
                 }
             }
             
@@ -639,8 +607,8 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.assetmainRowChanging != null)) {
-                    this.assetmainRowChanging(this, new assetmainRowChangeEvent(((assetmainRow)(e.Row)), e.Action));
+                if ((this.FindAssetMainBySerialNumberRowChanging != null)) {
+                    this.FindAssetMainBySerialNumberRowChanging(this, new FindAssetMainBySerialNumberRowChangeEvent(((FindAssetMainBySerialNumberRow)(e.Row)), e.Action));
                 }
             }
             
@@ -648,8 +616,8 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.assetmainRowDeleted != null)) {
-                    this.assetmainRowDeleted(this, new assetmainRowChangeEvent(((assetmainRow)(e.Row)), e.Action));
+                if ((this.FindAssetMainBySerialNumberRowDeleted != null)) {
+                    this.FindAssetMainBySerialNumberRowDeleted(this, new FindAssetMainBySerialNumberRowChangeEvent(((FindAssetMainBySerialNumberRow)(e.Row)), e.Action));
                 }
             }
             
@@ -657,14 +625,14 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.assetmainRowDeleting != null)) {
-                    this.assetmainRowDeleting(this, new assetmainRowChangeEvent(((assetmainRow)(e.Row)), e.Action));
+                if ((this.FindAssetMainBySerialNumberRowDeleting != null)) {
+                    this.FindAssetMainBySerialNumberRowDeleting(this, new FindAssetMainBySerialNumberRowChangeEvent(((FindAssetMainBySerialNumberRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveassetmainRow(assetmainRow row) {
+            public void RemoveFindAssetMainBySerialNumberRow(FindAssetMainBySerialNumberRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -673,7 +641,7 @@ namespace AssetDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AssetMainDataSet ds = new AssetMainDataSet();
+                FindAssetMainBySerialNumberDataSet ds = new FindAssetMainBySerialNumberDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -691,7 +659,7 @@ namespace AssetDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "assetmainDataTable";
+                attribute2.FixedValue = "FindAssetMainBySerialNumberDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -735,25 +703,25 @@ namespace AssetDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class assetmainRow : global::System.Data.DataRow {
+        public partial class FindAssetMainBySerialNumberRow : global::System.Data.DataRow {
             
-            private assetmainDataTable tableassetmain;
+            private FindAssetMainBySerialNumberDataTable tableFindAssetMainBySerialNumber;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal assetmainRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindAssetMainBySerialNumberRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableassetmain = ((assetmainDataTable)(this.Table));
+                this.tableFindAssetMainBySerialNumber = ((FindAssetMainBySerialNumberDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int AssetID {
                 get {
-                    return ((int)(this[this.tableassetmain.AssetIDColumn]));
+                    return ((int)(this[this.tableFindAssetMainBySerialNumber.AssetIDColumn]));
                 }
                 set {
-                    this[this.tableassetmain.AssetIDColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.AssetIDColumn] = value;
                 }
             }
             
@@ -761,21 +729,10 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssetPartNumber {
                 get {
-                    return ((string)(this[this.tableassetmain.AssetPartNumberColumn]));
+                    return ((string)(this[this.tableFindAssetMainBySerialNumber.AssetPartNumberColumn]));
                 }
                 set {
-                    this[this.tableassetmain.AssetPartNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int AssetTypeID {
-                get {
-                    return ((int)(this[this.tableassetmain.AssetTypeIDColumn]));
-                }
-                set {
-                    this[this.tableassetmain.AssetTypeIDColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.AssetPartNumberColumn] = value;
                 }
             }
             
@@ -783,43 +740,10 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssetDescription {
                 get {
-                    return ((string)(this[this.tableassetmain.AssetDescriptionColumn]));
+                    return ((string)(this[this.tableFindAssetMainBySerialNumber.AssetDescriptionColumn]));
                 }
                 set {
-                    this[this.tableassetmain.AssetDescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal AssetCost {
-                get {
-                    return ((decimal)(this[this.tableassetmain.AssetCostColumn]));
-                }
-                set {
-                    this[this.tableassetmain.AssetCostColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int WarehouseID {
-                get {
-                    return ((int)(this[this.tableassetmain.WarehouseIDColumn]));
-                }
-                set {
-                    this[this.tableassetmain.WarehouseIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int EmployeeID {
-                get {
-                    return ((int)(this[this.tableassetmain.EmployeeIDColumn]));
-                }
-                set {
-                    this[this.tableassetmain.EmployeeIDColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.AssetDescriptionColumn] = value;
                 }
             }
             
@@ -827,10 +751,65 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool AssetActive {
                 get {
-                    return ((bool)(this[this.tableassetmain.AssetActiveColumn]));
+                    return ((bool)(this[this.tableFindAssetMainBySerialNumber.AssetActiveColumn]));
                 }
                 set {
-                    this[this.tableassetmain.AssetActiveColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.AssetActiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int WarehouseID {
+                get {
+                    return ((int)(this[this.tableFindAssetMainBySerialNumber.WarehouseIDColumn]));
+                }
+                set {
+                    this[this.tableFindAssetMainBySerialNumber.WarehouseIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int EmployeeID {
+                get {
+                    return ((int)(this[this.tableFindAssetMainBySerialNumber.EmployeeIDColumn]));
+                }
+                set {
+                    this[this.tableFindAssetMainBySerialNumber.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    return ((string)(this[this.tableFindAssetMainBySerialNumber.FirstNameColumn]));
+                }
+                set {
+                    this[this.tableFindAssetMainBySerialNumber.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    return ((string)(this[this.tableFindAssetMainBySerialNumber.LastNameColumn]));
+                }
+                set {
+                    this[this.tableFindAssetMainBySerialNumber.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool AssetActive1 {
+                get {
+                    return ((bool)(this[this.tableFindAssetMainBySerialNumber.AssetActive1Column]));
+                }
+                set {
+                    this[this.tableFindAssetMainBySerialNumber.AssetActive1Column] = value;
                 }
             }
             
@@ -838,21 +817,10 @@ namespace AssetDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime ActiveDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableassetmain.ActiveDateColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindAssetMainBySerialNumber.ActiveDateColumn]));
                 }
                 set {
-                    this[this.tableassetmain.ActiveDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string AssetNotes {
-                get {
-                    return ((string)(this[this.tableassetmain.AssetNotesColumn]));
-                }
-                set {
-                    this[this.tableassetmain.AssetNotesColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.ActiveDateColumn] = value;
                 }
             }
             
@@ -861,14 +829,15 @@ namespace AssetDLL {
             public System.DateTime RetirementDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableassetmain.RetirementDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableFindAssetMainBySerialNumber.RetirementDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RetirementDate\' in table \'assetmain\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RetirementDate\' in table \'FindAssetMainBySerialNumber\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableassetmain.RetirementDateColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.RetirementDateColumn] = value;
                 }
             }
             
@@ -877,61 +846,40 @@ namespace AssetDLL {
             public string RetirementNotes {
                 get {
                     try {
-                        return ((string)(this[this.tableassetmain.RetirementNotesColumn]));
+                        return ((string)(this[this.tableFindAssetMainBySerialNumber.RetirementNotesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RetirementNotes\' in table \'assetmain\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RetirementNotes\' in table \'FindAssetMainBySerialNumber\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableassetmain.RetirementNotesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime DataEntryDate {
-                get {
-                    return ((global::System.DateTime)(this[this.tableassetmain.DataEntryDateColumn]));
-                }
-                set {
-                    this[this.tableassetmain.DataEntryDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string SerialNumber {
-                get {
-                    return ((string)(this[this.tableassetmain.SerialNumberColumn]));
-                }
-                set {
-                    this[this.tableassetmain.SerialNumberColumn] = value;
+                    this[this.tableFindAssetMainBySerialNumber.RetirementNotesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsRetirementDateNull() {
-                return this.IsNull(this.tableassetmain.RetirementDateColumn);
+                return this.IsNull(this.tableFindAssetMainBySerialNumber.RetirementDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetRetirementDateNull() {
-                this[this.tableassetmain.RetirementDateColumn] = global::System.Convert.DBNull;
+                this[this.tableFindAssetMainBySerialNumber.RetirementDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsRetirementNotesNull() {
-                return this.IsNull(this.tableassetmain.RetirementNotesColumn);
+                return this.IsNull(this.tableFindAssetMainBySerialNumber.RetirementNotesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetRetirementNotesNull() {
-                this[this.tableassetmain.RetirementNotesColumn] = global::System.Convert.DBNull;
+                this[this.tableFindAssetMainBySerialNumber.RetirementNotesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -939,22 +887,22 @@ namespace AssetDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class assetmainRowChangeEvent : global::System.EventArgs {
+        public class FindAssetMainBySerialNumberRowChangeEvent : global::System.EventArgs {
             
-            private assetmainRow eventRow;
+            private FindAssetMainBySerialNumberRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRowChangeEvent(assetmainRow row, global::System.Data.DataRowAction action) {
+            public FindAssetMainBySerialNumberRowChangeEvent(FindAssetMainBySerialNumberRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public assetmainRow Row {
+            public FindAssetMainBySerialNumberRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -970,7 +918,7 @@ namespace AssetDLL {
         }
     }
 }
-namespace AssetDLL.AssetMainDataSetTableAdapters {
+namespace AssetDLL.FindAssetMainBySerialNumberDataSetTableAdapters {
     
     
     /// <summary>
@@ -982,7 +930,7 @@ namespace AssetDLL.AssetMainDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class assetmainTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindAssetMainBySerialNumberTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -996,7 +944,7 @@ namespace AssetDLL.AssetMainDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public assetmainTableAdapter() {
+        public FindAssetMainBySerialNumberTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1093,83 +1041,20 @@ namespace AssetDLL.AssetMainDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "assetmain";
+            tableMapping.DataSetTable = "FindAssetMainBySerialNumber";
             tableMapping.ColumnMappings.Add("AssetID", "AssetID");
             tableMapping.ColumnMappings.Add("AssetPartNumber", "AssetPartNumber");
-            tableMapping.ColumnMappings.Add("AssetTypeID", "AssetTypeID");
             tableMapping.ColumnMappings.Add("AssetDescription", "AssetDescription");
-            tableMapping.ColumnMappings.Add("AssetCost", "AssetCost");
+            tableMapping.ColumnMappings.Add("AssetActive", "AssetActive");
             tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
             tableMapping.ColumnMappings.Add("EmployeeID", "EmployeeID");
-            tableMapping.ColumnMappings.Add("AssetActive", "AssetActive");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("AssetActive1", "AssetActive1");
             tableMapping.ColumnMappings.Add("ActiveDate", "ActiveDate");
-            tableMapping.ColumnMappings.Add("AssetNotes", "AssetNotes");
             tableMapping.ColumnMappings.Add("RetirementDate", "RetirementDate");
             tableMapping.ColumnMappings.Add("RetirementNotes", "RetirementNotes");
-            tableMapping.ColumnMappings.Add("DataEntryDate", "DataEntryDate");
-            tableMapping.ColumnMappings.Add("SerialNumber", "SerialNumber");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[assetmain] WHERE (([AssetID] = @Original_AssetID) AND ([AssetTypeID] = @Original_AssetTypeID) AND ([AssetCost] = @Original_AssetCost) AND ([WarehouseID] = @Original_WarehouseID) AND ([EmployeeID] = @Original_EmployeeID) AND ([AssetActive] = @Original_AssetActive) AND ([ActiveDate] = @Original_ActiveDate) AND ((@IsNull_RetirementDate = 1 AND [RetirementDate] IS NULL) OR ([RetirementDate] = @Original_RetirementDate)) AND ([DataEntryDate] = @Original_DataEntryDate))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "AssetCost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WarehouseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WarehouseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetActive", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ActiveDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActiveDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RetirementDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RetirementDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataEntryDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[assetmain] ([AssetPartNumber], [AssetTypeID], [AssetDescription], [AssetCost], [WarehouseID], [EmployeeID], [AssetActive], [ActiveDate], [AssetNotes], [RetirementDate], [RetirementNotes], [DataEntryDate], [SerialNumber]) VALUES (@AssetPartNumber, @AssetTypeID, @AssetDescription, @AssetCost, @WarehouseID, @EmployeeID, @AssetActive, @ActiveDate, @AssetNotes, @RetirementDate, @RetirementNotes, @DataEntryDate, @SerialNumber);
-SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, WarehouseID, EmployeeID, AssetActive, ActiveDate, AssetNotes, RetirementDate, RetirementNotes, DataEntryDate, SerialNumber FROM assetmain WHERE (AssetID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetPartNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetPartNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "AssetCost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WarehouseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WarehouseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetActive", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActiveDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActiveDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RetirementDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RetirementNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataEntryDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SerialNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SerialNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[assetmain] SET [AssetPartNumber] = @AssetPartNumber, [AssetTypeID] = @AssetTypeID, [AssetDescription] = @AssetDescription, [AssetCost] = @AssetCost, [WarehouseID] = @WarehouseID, [EmployeeID] = @EmployeeID, [AssetActive] = @AssetActive, [ActiveDate] = @ActiveDate, [AssetNotes] = @AssetNotes, [RetirementDate] = @RetirementDate, [RetirementNotes] = @RetirementNotes, [DataEntryDate] = @DataEntryDate, [SerialNumber] = @SerialNumber WHERE (([AssetID] = @Original_AssetID) AND ([AssetTypeID] = @Original_AssetTypeID) AND ([AssetCost] = @Original_AssetCost) AND ([WarehouseID] = @Original_WarehouseID) AND ([EmployeeID] = @Original_EmployeeID) AND ([AssetActive] = @Original_AssetActive) AND ([ActiveDate] = @Original_ActiveDate) AND ((@IsNull_RetirementDate = 1 AND [RetirementDate] IS NULL) OR ([RetirementDate] = @Original_RetirementDate)) AND ([DataEntryDate] = @Original_DataEntryDate));
-SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, WarehouseID, EmployeeID, AssetActive, ActiveDate, AssetNotes, RetirementDate, RetirementNotes, DataEntryDate, SerialNumber FROM assetmain WHERE (AssetID = @AssetID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetPartNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetPartNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "AssetCost", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WarehouseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WarehouseID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetActive", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ActiveDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActiveDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RetirementDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RetirementNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataEntryDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SerialNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SerialNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetCost", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "AssetCost", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WarehouseID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WarehouseID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AssetActive", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AssetActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ActiveDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ActiveDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RetirementDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RetirementDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RetirementDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataEntryDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataEntryDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AssetID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AssetID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1185,18 +1070,24 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareho" +
-                "useID, EmployeeID, AssetActive, ActiveDate, AssetNotes, RetirementDate, Retireme" +
-                "ntNotes, DataEntryDate, SerialNumber FROM dbo.assetmain";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.FindAssetMainBySerialNumber";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SerialNumber", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AssetMainDataSet.assetmainDataTable dataTable) {
+        public virtual int Fill(FindAssetMainBySerialNumberDataSet.FindAssetMainBySerialNumberDataTable dataTable, string SerialNumber) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((SerialNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SerialNumber));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1208,275 +1099,17 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AssetMainDataSet.assetmainDataTable GetData() {
+        public virtual FindAssetMainBySerialNumberDataSet.FindAssetMainBySerialNumberDataTable GetData(string SerialNumber) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AssetMainDataSet.assetmainDataTable dataTable = new AssetMainDataSet.assetmainDataTable();
+            if ((SerialNumber == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(SerialNumber));
+            }
+            FindAssetMainBySerialNumberDataSet.FindAssetMainBySerialNumberDataTable dataTable = new FindAssetMainBySerialNumberDataSet.FindAssetMainBySerialNumberDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AssetMainDataSet.assetmainDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AssetMainDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "assetmain");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_AssetID, int Original_AssetTypeID, decimal Original_AssetCost, int Original_WarehouseID, int Original_EmployeeID, bool Original_AssetActive, System.DateTime Original_ActiveDate, global::System.Nullable<global::System.DateTime> Original_RetirementDate, System.DateTime Original_DataEntryDate) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AssetID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_AssetTypeID));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_AssetCost));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_WarehouseID));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_EmployeeID));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_AssetActive));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_ActiveDate));
-            if ((Original_RetirementDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_RetirementDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_DataEntryDate));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string AssetPartNumber, int AssetTypeID, string AssetDescription, decimal AssetCost, int WarehouseID, int EmployeeID, bool AssetActive, System.DateTime ActiveDate, string AssetNotes, global::System.Nullable<global::System.DateTime> RetirementDate, string RetirementNotes, System.DateTime DataEntryDate, string SerialNumber) {
-            if ((AssetPartNumber == null)) {
-                throw new global::System.ArgumentNullException("AssetPartNumber");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(AssetPartNumber));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(AssetTypeID));
-            if ((AssetDescription == null)) {
-                throw new global::System.ArgumentNullException("AssetDescription");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AssetDescription));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(AssetCost));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(WarehouseID));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(EmployeeID));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(AssetActive));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(ActiveDate));
-            if ((AssetNotes == null)) {
-                throw new global::System.ArgumentNullException("AssetNotes");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(AssetNotes));
-            }
-            if ((RetirementDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(RetirementDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((RetirementNotes == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(RetirementNotes));
-            }
-            this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(DataEntryDate));
-            if ((SerialNumber == null)) {
-                throw new global::System.ArgumentNullException("SerialNumber");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(SerialNumber));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string AssetPartNumber, 
-                    int AssetTypeID, 
-                    string AssetDescription, 
-                    decimal AssetCost, 
-                    int WarehouseID, 
-                    int EmployeeID, 
-                    bool AssetActive, 
-                    System.DateTime ActiveDate, 
-                    string AssetNotes, 
-                    global::System.Nullable<global::System.DateTime> RetirementDate, 
-                    string RetirementNotes, 
-                    System.DateTime DataEntryDate, 
-                    string SerialNumber, 
-                    int Original_AssetID, 
-                    int Original_AssetTypeID, 
-                    decimal Original_AssetCost, 
-                    int Original_WarehouseID, 
-                    int Original_EmployeeID, 
-                    bool Original_AssetActive, 
-                    System.DateTime Original_ActiveDate, 
-                    global::System.Nullable<global::System.DateTime> Original_RetirementDate, 
-                    System.DateTime Original_DataEntryDate, 
-                    int AssetID) {
-            if ((AssetPartNumber == null)) {
-                throw new global::System.ArgumentNullException("AssetPartNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(AssetPartNumber));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(AssetTypeID));
-            if ((AssetDescription == null)) {
-                throw new global::System.ArgumentNullException("AssetDescription");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AssetDescription));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(AssetCost));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(WarehouseID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(EmployeeID));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(AssetActive));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(ActiveDate));
-            if ((AssetNotes == null)) {
-                throw new global::System.ArgumentNullException("AssetNotes");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(AssetNotes));
-            }
-            if ((RetirementDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(RetirementDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((RetirementNotes == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(RetirementNotes));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(DataEntryDate));
-            if ((SerialNumber == null)) {
-                throw new global::System.ArgumentNullException("SerialNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(SerialNumber));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_AssetID));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_AssetTypeID));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_AssetCost));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_WarehouseID));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_EmployeeID));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_AssetActive));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_ActiveDate));
-            if ((Original_RetirementDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_RetirementDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_DataEntryDate));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(AssetID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string AssetPartNumber, 
-                    int AssetTypeID, 
-                    string AssetDescription, 
-                    decimal AssetCost, 
-                    int WarehouseID, 
-                    int EmployeeID, 
-                    bool AssetActive, 
-                    System.DateTime ActiveDate, 
-                    string AssetNotes, 
-                    global::System.Nullable<global::System.DateTime> RetirementDate, 
-                    string RetirementNotes, 
-                    System.DateTime DataEntryDate, 
-                    string SerialNumber, 
-                    int Original_AssetID, 
-                    int Original_AssetTypeID, 
-                    decimal Original_AssetCost, 
-                    int Original_WarehouseID, 
-                    int Original_EmployeeID, 
-                    bool Original_AssetActive, 
-                    System.DateTime Original_ActiveDate, 
-                    global::System.Nullable<global::System.DateTime> Original_RetirementDate, 
-                    System.DateTime Original_DataEntryDate) {
-            return this.Update(AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, WarehouseID, EmployeeID, AssetActive, ActiveDate, AssetNotes, RetirementDate, RetirementNotes, DataEntryDate, SerialNumber, Original_AssetID, Original_AssetTypeID, Original_AssetCost, Original_WarehouseID, Original_EmployeeID, Original_AssetActive, Original_ActiveDate, Original_RetirementDate, Original_DataEntryDate, Original_AssetID);
         }
     }
     
@@ -1492,8 +1125,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         
         private UpdateOrderOption _updateOrder;
         
-        private assetmainTableAdapter _assetmainTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1506,20 +1137,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public assetmainTableAdapter assetmainTableAdapter {
-            get {
-                return this._assetmainTableAdapter;
-            }
-            set {
-                this._assetmainTableAdapter = value;
             }
         }
         
@@ -1542,10 +1159,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._assetmainTableAdapter != null) 
-                            && (this._assetmainTableAdapter.Connection != null))) {
-                    return this._assetmainTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1559,9 +1172,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._assetmainTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1571,17 +1181,8 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(AssetMainDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindAssetMainBySerialNumberDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._assetmainTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.assetmain.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._assetmainTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1590,16 +1191,8 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(AssetMainDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindAssetMainBySerialNumberDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._assetmainTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.assetmain.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._assetmainTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1608,16 +1201,8 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(AssetMainDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindAssetMainBySerialNumberDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._assetmainTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.assetmain.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._assetmainTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1650,17 +1235,12 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(AssetMainDataSet dataSet) {
+        public virtual int UpdateAll(FindAssetMainBySerialNumberDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._assetmainTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._assetmainTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1694,15 +1274,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._assetmainTableAdapter != null)) {
-                    revertConnections.Add(this._assetmainTableAdapter, this._assetmainTableAdapter.Connection);
-                    this._assetmainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._assetmainTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._assetmainTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._assetmainTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._assetmainTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1760,10 +1331,6 @@ SELECT AssetID, AssetPartNumber, AssetTypeID, AssetDescription, AssetCost, Wareh
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._assetmainTableAdapter != null)) {
-                    this._assetmainTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._assetmainTableAdapter]));
-                    this._assetmainTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

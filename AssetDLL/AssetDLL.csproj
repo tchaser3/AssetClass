@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindAssetAssignmentHistoryByDateRangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindAssetMainBySerialNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAssetMainBySerialNumberDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindAssetTypeByAssetTypeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -337,6 +342,17 @@
     </None>
     <None Include="FindAssetAssignmentHistoryByDateRangeDataSet.xss">
       <DependentUpon>FindAssetAssignmentHistoryByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetMainBySerialNumberDataSet.xsc">
+      <DependentUpon>FindAssetMainBySerialNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAssetMainBySerialNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAssetMainBySerialNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAssetMainBySerialNumberDataSet.xss">
+      <DependentUpon>FindAssetMainBySerialNumberDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindAssetTypeByAssetTypeDataSet.xsc">
       <DependentUpon>FindAssetTypeByAssetTypeDataSet.xsd</DependentUpon>

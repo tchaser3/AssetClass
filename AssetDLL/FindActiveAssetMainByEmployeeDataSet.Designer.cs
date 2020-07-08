@@ -291,6 +291,8 @@ namespace AssetDLL {
             
             private global::System.Data.DataColumn columnAssetCost;
             
+            private global::System.Data.DataColumn columnSerialNumber;
+            
             private global::System.Data.DataColumn columnWarehouseID;
             
             private global::System.Data.DataColumn columnLocation;
@@ -382,6 +384,14 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SerialNumberColumn {
+                get {
+                    return this.columnSerialNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn WarehouseIDColumn {
                 get {
                     return this.columnWarehouseID;
@@ -449,7 +459,7 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindActiveAssetMainByEmployeeRow AddFindActiveAssetMainByEmployeeRow(string AssetPartNumber, int AssetTypeID, string AssetType, string AssetDescription, decimal AssetCost, int WarehouseID, string Location, System.DateTime ActiveDate, string AssetNotes) {
+            public FindActiveAssetMainByEmployeeRow AddFindActiveAssetMainByEmployeeRow(string AssetPartNumber, int AssetTypeID, string AssetType, string AssetDescription, decimal AssetCost, string SerialNumber, int WarehouseID, string Location, System.DateTime ActiveDate, string AssetNotes) {
                 FindActiveAssetMainByEmployeeRow rowFindActiveAssetMainByEmployeeRow = ((FindActiveAssetMainByEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -458,6 +468,7 @@ namespace AssetDLL {
                         AssetType,
                         AssetDescription,
                         AssetCost,
+                        SerialNumber,
                         WarehouseID,
                         Location,
                         ActiveDate,
@@ -497,6 +508,7 @@ namespace AssetDLL {
                 this.columnAssetType = base.Columns["AssetType"];
                 this.columnAssetDescription = base.Columns["AssetDescription"];
                 this.columnAssetCost = base.Columns["AssetCost"];
+                this.columnSerialNumber = base.Columns["SerialNumber"];
                 this.columnWarehouseID = base.Columns["WarehouseID"];
                 this.columnLocation = base.Columns["Location"];
                 this.columnActiveDate = base.Columns["ActiveDate"];
@@ -518,6 +530,8 @@ namespace AssetDLL {
                 base.Columns.Add(this.columnAssetDescription);
                 this.columnAssetCost = new global::System.Data.DataColumn("AssetCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssetCost);
+                this.columnSerialNumber = new global::System.Data.DataColumn("SerialNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerialNumber);
                 this.columnWarehouseID = new global::System.Data.DataColumn("WarehouseID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarehouseID);
                 this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
@@ -540,6 +554,8 @@ namespace AssetDLL {
                 this.columnAssetDescription.AllowDBNull = false;
                 this.columnAssetDescription.MaxLength = 2147483647;
                 this.columnAssetCost.AllowDBNull = false;
+                this.columnSerialNumber.AllowDBNull = false;
+                this.columnSerialNumber.MaxLength = 2147483647;
                 this.columnWarehouseID.AllowDBNull = false;
                 this.columnLocation.AllowDBNull = false;
                 this.columnLocation.MaxLength = 2147483647;
@@ -754,6 +770,17 @@ namespace AssetDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SerialNumber {
+                get {
+                    return ((string)(this[this.tableFindActiveAssetMainByEmployee.SerialNumberColumn]));
+                }
+                set {
+                    this[this.tableFindActiveAssetMainByEmployee.SerialNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int WarehouseID {
                 get {
                     return ((int)(this[this.tableFindActiveAssetMainByEmployee.WarehouseIDColumn]));
@@ -962,6 +989,7 @@ namespace AssetDLL.FindActiveAssetMainByEmployeeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("AssetType", "AssetType");
             tableMapping.ColumnMappings.Add("AssetDescription", "AssetDescription");
             tableMapping.ColumnMappings.Add("AssetCost", "AssetCost");
+            tableMapping.ColumnMappings.Add("SerialNumber", "SerialNumber");
             tableMapping.ColumnMappings.Add("WarehouseID", "WarehouseID");
             tableMapping.ColumnMappings.Add("Location", "Location");
             tableMapping.ColumnMappings.Add("ActiveDate", "ActiveDate");

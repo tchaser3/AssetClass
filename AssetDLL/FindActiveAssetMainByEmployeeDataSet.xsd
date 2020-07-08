@@ -28,6 +28,7 @@
               <Mapping SourceColumn="AssetType" DataSetColumn="AssetType" />
               <Mapping SourceColumn="AssetDescription" DataSetColumn="AssetDescription" />
               <Mapping SourceColumn="AssetCost" DataSetColumn="AssetCost" />
+              <Mapping SourceColumn="SerialNumber" DataSetColumn="SerialNumber" />
               <Mapping SourceColumn="WarehouseID" DataSetColumn="WarehouseID" />
               <Mapping SourceColumn="Location" DataSetColumn="Location" />
               <Mapping SourceColumn="ActiveDate" DataSetColumn="ActiveDate" />
@@ -70,6 +71,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="AssetCost" msprop:Generator_ColumnVarNameInTable="columnAssetCost" msprop:Generator_ColumnPropNameInRow="AssetCost" msprop:Generator_ColumnPropNameInTable="AssetCostColumn" msprop:Generator_UserColumnName="AssetCost" type="xs:decimal" />
+              <xs:element name="SerialNumber" msprop:Generator_ColumnVarNameInTable="columnSerialNumber" msprop:Generator_ColumnPropNameInRow="SerialNumber" msprop:Generator_ColumnPropNameInTable="SerialNumberColumn" msprop:Generator_UserColumnName="SerialNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="WarehouseID" msprop:Generator_ColumnVarNameInTable="columnWarehouseID" msprop:Generator_ColumnPropNameInRow="WarehouseID" msprop:Generator_ColumnPropNameInTable="WarehouseIDColumn" msprop:Generator_UserColumnName="WarehouseID" type="xs:int" />
               <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location">
                 <xs:simpleType>
